@@ -1,24 +1,32 @@
 .accordion 
     &-item 
+        margin-bottom: 5px
+        &:last-child
+            margin-bottom: 0
         &__header 
             position: relative
-            padding: 15px 25px 15px 0
+            padding: 15px 25px 15px 15px
             color: #000000
             font-size: 1.25rem
-            font-weight: bold
+            font-weight: 600
             cursor: pointer
+            background-color: transparent
+            border-radius: 3px
             &::after
                 content: ''
                 position: absolute
                 top: 50%
                 transform: translateY(-50%)
-                right: 5px
+                right: 15px
                 background: url('../images/icons/arrow.svg')
                 background-repeat: no-repeat
                 background-size: cover
                 width: 15px 
                 height: 15px
+            &:hover
+                background-color: #EDEDED
         &__content 
+            padding: 0 15px
             background: #fff
             transition: opacity .4s ease
             visibility: hidden
@@ -53,8 +61,8 @@
             margin-bottom: 10px
             &-text
                 padding-right: 73px
-                font-size: 1rem
-                font-weight: bold
+                font-size: 0.95rem
+                font-weight: 600
                 line-height: 1.25
             &-date
                 position: absolute
@@ -62,17 +70,17 @@
                 right: 0
                 font-size: 0.7rem
                 color: #A7A7A7
-                background-color: #ffffff
         &__message
             font-size: 0.88rem
             color: #A7A7A7
 
 .accordion-item.show .accordion-item__content 
-    padding: 20px 0
+    padding: 20px 15px
     visibility: visible
     height: auto
     opacity: 1
 
 .accordion-item.show .accordion-item__header 
+    background-color: #EDEDED
     &::after
         transform: translateY(-50%) rotate(180deg)

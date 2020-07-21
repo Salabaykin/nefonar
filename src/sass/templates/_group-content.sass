@@ -1,14 +1,19 @@
 .group-content
-    margin-left: 30px
+    height: calc(100vh - 115px)
+    overflow-y: scroll
+    flex: 1
     &__head 
-        margin-bottom: 20px
+        position: sticky
+        top: 0
+        z-index: 2
+        padding: 10px 16px
         display: flex
+        background-color: #EDEDED
     &__images 
         display: block
-        width: 67px
-        height: 67px
+        width: 40px
+        height: 40px
         position: relative
-        padding: 0 0 15% 0
         overflow: hidden
         border-radius: 50%
         img 
@@ -18,3 +23,48 @@
             position: absolute
             top: 0
             left: 0
+    &__title
+        flex: 1
+        margin-left: 15px
+        display: flex
+        align-items: center
+        position: relative
+        &-text
+            padding-right: 5px
+            font-size: 0.95rem
+            font-weight: 600
+            line-height: 1.25
+        &-num
+            line-height: 1.25
+            font-weight: 600
+            font-size: 0.95rem
+            color: #A7A7A7
+    &__main
+        background: url('../images/content-bg.png') repeat 
+        background-color: #e5ddd5
+        min-height: calc(100% - 60px)
+        width: 100%
+        padding-left: 9%
+        padding-right: 9%
+        padding-bottom: 20px
+        padding-top: 20px
+    &__search
+        position: relative
+    &__input
+        box-shadow: 0 1px .5px rgba(0,0,0,.13)
+        width: 300px
+        border: none
+        padding: 10px 40px 10px 15px
+        border-radius: 3px
+        color: #000000
+        font-family: 'Open Sans', sans-serif
+        font-size: 0.9rem 
+        background-color: #ffffff
+    &__icon
+        position: absolute
+        top: 45%
+        transform: translateY(-50%)
+        right: 15px
+        width: 15px
+        height: 15px
+        fill: #A7A7A7
