@@ -41,6 +41,3 @@ var accordion = (function (element) {
 
 var accordion1 = accordion();
 accordion1.init('#accordion');
-
-var groupContent = document.getElementById("group-content");
-groupContent.scrollTop = groupContent.scrollHeight;

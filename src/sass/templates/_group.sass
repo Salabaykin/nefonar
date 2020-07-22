@@ -5,6 +5,7 @@
     overflow-y: scroll
     &-search
         position: relative
+        margin-top: 15px
         margin-bottom: 15px
         &__input
             width: 100%
@@ -12,7 +13,7 @@
             padding: 15px 40px 15px 15px
             border-radius: 3px
             color: #000000
-            font-family: 'Open Sans', sans-serif
+            font-family: 'Segoe UI', sans-serif
             font-size: 1rem 
             background-color: #EDEDED
         &__icon
@@ -26,21 +27,21 @@
     &-list
         margin-bottom: 15px
     &-add
-        padding: 15px 0
+        padding-top: 15px
         &__button
             display: block
             border-radius: 3px
             width: 100%
             padding: 10px 20px
             font-size: 1rem
-            font-weight: 600
+            font-weight: bold
             background-color: #EDEDED
-            transition: all 0.3s
+            transition: all 0.2s
             span
                 position: relative
                 margin-right: 35px
                 .add-button-icon
-                    transition: all 0.3s
+                    transition: all 0.2s
                     position: absolute
                     top: 50%
                     transform: translateY(-50%)
@@ -54,5 +55,8 @@
                     fill: #ffffff
   
 input.group-search__input
+    transition: all 0.2s
     &:focus
-        box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.15)
+        transition: all 0.2s
+        background-color: #ffffff
+        box-shadow: 0 1px .5px rgba(0,0,0,.13)

@@ -7,6 +7,8 @@
     background-color: #ffffff
     border-radius: 0 7px 7px 7px
     box-shadow: 0 1px .5px rgba(0,0,0,.13)
+    &:last-child
+        margin-bottom: 0
     span 
         position: absolute
         top: -1px
@@ -18,7 +20,7 @@
         &-tel 
             padding-right: 30px
             font-size: 13px
-            font-weight: 600
+            font-weight: bold
             color: #6bcbef
             &:hover
                 text-decoration: underline
@@ -45,3 +47,24 @@
             height: 11px
             background: url('../images/icons/whatsapp.svg') no-repeat
             background-size: cover
+    &-load, 
+    &-date
+        position: relative
+        margin: 0 auto
+        margin-bottom: 12px
+        padding: 5px 12px 6px
+        width: fit-content
+        background-color: #E1F3FB
+        border-radius: 7px
+        box-shadow: 0 1px .5px rgba(0,0,0,.13)
+        &__link
+            text-transform: uppercase
+            font-size: 0.78125rem
+            line-height: 21px
+            text-shadow: 0 1px 0 rgba(255,255,255,.4)
+            &:hover
+                text-decoration: underline
+        &__text
+            font-size: 0.78125rem
+            line-height: 21px
+            text-shadow: 0 1px 0 rgba(255,255,255,.4) 
