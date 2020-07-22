@@ -1,14 +1,17 @@
 .group-content
     height: calc(100vh - 115px)
-    overflow-y: scroll
+    overflow-x: hidden
+    overflow-y: hidden
+    display: flex
     flex: 1
     &__head 
-        position: sticky
-        top: 0
         z-index: 2
         padding: 10px 16px
         display: flex
+        align-items: center
         background-color: #EDEDED
+        border-bottom: 1px solid rgba(0,0,0,0.08)
+        border-right: 1px solid rgba(0,0,0,0.05)
     &__images 
         display: block
         width: 40px
@@ -40,31 +43,110 @@
             font-size: 0.95rem
             color: #A7A7A7
     &__main
+        // overflow-y: scroll
+        overflow-x: hidden
+        position: relative
         background: url('../images/content-bg.png') repeat 
         background-color: #e5ddd5
-        min-height: calc(100% - 60px)
+        height: calc(100% - 61px)
         width: 100%
         padding-left: 7%
         padding-right: 7%
         padding-bottom: 20px
         padding-top: 20px
     &__search
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 40px
+        height: 40px
+        cursor: pointer
+    &__icon
+        width: 24px
+        height: 24px
+        fill: rgba(145,145,145,1)
+    &__wrapper
+        flex: 1px
+
+.search-block
+    position: sticky
+    top: 0
+    z-index: 10
+    transition: 0.15s 
+    transform: translate(200%, 0)
+    width: 0
+    height: 100%
+    background-color: #ffffff
+    text-align: center
+    &__head
+        display: flex
+        align-items: center
+        min-height: 61px
+        background-color: #EDEDED
+        padding-right: 20px
+        padding-left: 25px
+        border-bottom: 1px solid rgba(0,0,0,0.05)
+        border-right: 1px solid rgba(0,0,0,0.05)
+        &-btn
+            width: 40px
+            height: 40px
+            cursor: pointer
+            display: flex
+            align-items: center
+        &-text
+            margin-left: 10px
+    &__content
+        padding: 50px
+        font-size: 0.875rem
+        color: rgba(0,0,0,0.45)
+        border-right: 1px solid rgba(0,0,0,0.05)
+        border-left: 1px solid rgba(0,0,0,0.05)
+        span 
+            font-weight: bold
+    &__search
         position: relative
-    &__input
-        box-shadow: 0 1px .5px rgba(0,0,0,.13)
-        width: 250px
-        border: none
-        padding: 10px 40px 10px 15px
-        border-radius: 3px
-        color: #000000
-        font-family: 'Segoe UI', sans-serif
-        font-size: 0.9rem 
-        background-color: #ffffff
+        padding: 10px 15px
+        display: flex
+        background-color: rgba(247,247,247,1)
+        border-right: 1px solid rgba(0,0,0,0.05)
+        border-left: 1px solid rgba(0,0,0,0.05)
     &__icon
         position: absolute
-        top: 45%
+        top: 50%
         transform: translateY(-50%)
-        right: 15px
-        width: 15px
-        height: 15px
-        fill: #A7A7A7
+        left: 30px
+        width: 20px
+        height: 20px
+        fill: rgba(145,145,145,1)
+    &__input
+        width: 100%
+        background-color: #ffffff
+        border: none
+        border-radius: 5px
+        padding: 10px 15px 10px 50px
+        font-family: 'Segoe UI', sans-serif
+        font-size: 1rem
+        color: #000000
+
+.search-block.open
+    width: 340px
+    transform: translate(0, 0)
+
+input.search-block__input
+    transition: all 0.2s
+    &:focus
+        transition: all 0.2s
+        box-shadow: 0 1px .5px rgba(0,0,0,.13)
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail
+    background-color: transparent !important
+
+.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+    background-color: rgba(0,0,0,.2)
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+    width: 6px !important
+    border-radius: 0
+
+.mCS-dark.mCSB_scrollTools .mCSB_draggerRail
+    background-color: transparent

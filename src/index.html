@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nefonar</title>
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -61,16 +62,10 @@
               <!-- /.group-add -->
 
               <div class="group-search">
-                <input class="group-search__input" type="text" name="search" placeholder="Поиск...">
                 <span>
-                  <svg class="group-search__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-                    <path d="M508.874,478.708L360.142,329.976c28.21-34.827,45.191-79.103,45.191-127.309c0-111.75-90.917-202.667-202.667-202.667
-                      S0,90.917,0,202.667s90.917,202.667,202.667,202.667c48.206,0,92.482-16.982,127.309-45.191l148.732,148.732
-                      c4.167,4.165,10.919,4.165,15.086,0l15.081-15.082C513.04,489.627,513.04,482.873,508.874,478.708z M202.667,362.667
-                      c-88.229,0-160-71.771-160-160s71.771-160,160-160s160,71.771,160,160S290.896,362.667,202.667,362.667z"/>
-                  </svg>
+                  <svg class="group-search__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.9 14.3H15l-.3-.3c1-1.1 1.6-2.7 1.6-4.3 0-3.7-3-6.7-6.7-6.7S3 6 3 9.7s3 6.7 6.7 6.7c1.6 0 3.2-.6 4.3-1.6l.3.3v.8l5.1 5.1 1.5-1.5-5-5.2zm-6.2 0c-2.6 0-4.6-2.1-4.6-4.6s2.1-4.6 4.6-4.6 4.6 2.1 4.6 4.6-2 4.6-4.6 4.6z"></path></svg>
                 </span>
+                <input class="group-search__input" type="text" name="search-block" placeholder="Поиск...">
               </div>
               <!-- /.group-search -->
 
@@ -369,148 +364,160 @@
 
           <div class="group-content" id="group-content">
 
-            <div class="group-content__head">
-              <div class="group-content__images">
-                <img src="images/group-img-3.jpg" alt="Фото группы">
+            <div class="group-content__wrapper">
+
+              <div class="group-content__head">
+                <div class="group-content__images">
+                  <img src="images/group-img-3.jpg" alt="Фото группы">
+                </div>
+                <div class="group-content__title">
+                  <div class="group-content__title-text">Студии для отдыха</div>
+                  <div class="group-content__title-num">/ Участников: <span>158</span></div>
+                </div>
+                <div class="group-content__search">
+                  <span>
+                    <svg class="group-content__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.9 14.3H15l-.3-.3c1-1.1 1.6-2.7 1.6-4.3 0-3.7-3-6.7-6.7-6.7S3 6 3 9.7s3 6.7 6.7 6.7c1.6 0 3.2-.6 4.3-1.6l.3.3v.8l5.1 5.1 1.5-1.5-5-5.2zm-6.2 0c-2.6 0-4.6-2.1-4.6-4.6s2.1-4.6 4.6-4.6 4.6 2.1 4.6 4.6-2 4.6-4.6 4.6z"></path></svg>
+                  </span>
+                </div>
               </div>
-              <div class="group-content__title">
-                <div class="group-content__title-text">Студии для отдыха</div>
-                <div class="group-content__title-num">/ Участников: <span>158</span></div>
+              <!-- /.group-content__head -->
+  
+              <div class="group-content__main">
+  
+                <div class="wrapper">
+
+                  <div class="group-message-load">
+                    <a class="group-message-load__link" href="#">Ранее</a>
+                  </div>
+                  <!-- /.group-message-load -->
+    
+                  <div class="group-message-date">
+                    <div class="group-message-date__text">14.08.2020</div>
+                  </div>
+                  <!-- /.group-message-date -->
+    
+                  <div class="group-message">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path fill="#ffffff" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="#ffffff" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span>
+                    <div class="group-message__head">
+                      <a href="#" class="group-message__head-tel">+7 967 327-09-84</a>
+                      <div class="group-message__whatsapp">WhatsApp</div>
+                    </div>
+                    <div class="group-message__text">
+                      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    </div>
+                    <div class="group-message__time">
+                      12:54
+                    </div>
+                  </div>
+                  <!-- /.group-message -->
+  
+                  <div class="group-message">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path fill="#ffffff" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="#ffffff" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span>
+                    <div class="group-message__head">
+                      <a href="#" class="group-message__head-tel">+7 967 327-09-84</a>
+                      <div class="group-message__whatsapp">WhatsApp</div>
+                    </div>
+                    <div class="group-message__text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, rerum quibusdam earum optio voluptatem nemo ea recusandae, magni excepturi reiciendis possimus omnis quisquam labore illo? Hic, unde! Voluptas quam quidem reprehenderit ut quo dicta maiores, excepturi vel. Quis, quisquam harum?
+                    </div>
+                    <div class="group-message__time">
+                      12:54
+                    </div>
+                  </div>
+                  <!-- /.group-message -->
+  
+                  <div class="group-message">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path fill="#ffffff" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="#ffffff" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span>
+                    <div class="group-message__head">
+                      <a href="#" class="group-message__head-tel">+7 967 327-09-84</a>
+                      <div class="group-message__whatsapp">WhatsApp</div>
+                    </div>
+                    <div class="group-message__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ut neque explicabo, voluptatum deleniti porro nulla rerum minus quibusdam provident mollitia hic ipsum laboriosam. Tenetur debitis similique iste eveniet excepturi, illo voluptate, ea laudantium, ipsam dolore quas fuga quaerat saepe ex deleniti. Natus, illo magni! Quam omnis cumque laboriosam ipsum id voluptates, repellat saepe natus, placeat sed molestiae, fugit nemo ea perspiciatis dolores quidem voluptatum obcaecati iste quis alias possimus voluptatem voluptatibus sit. Architecto, nemo natus id quam illo tenetur, rem officiis, ex nostrum minus mollitia! Dignissimos, exercitationem. Illum iste enim omnis quibusdam odio autem harum vitae accusantium ad vero.
+                    </div>
+                    <div class="group-message__time">
+                      12:54
+                    </div>
+                  </div>
+                  <!-- /.group-message -->
+  
+                  <div class="group-message">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path fill="#ffffff" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="#ffffff" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span>
+                    <div class="group-message__head">
+                      <a href="#" class="group-message__head-tel">+7 967 327-09-84</a>
+                      <div class="group-message__whatsapp">WhatsApp</div>
+                    </div>
+                    <div class="group-message__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ut neque explicabo, voluptatum deleniti porro nulla rerum minus quibusdam provident mollitia hic ipsum laboriosam. Tenetur debitis similique iste eveniet excepturi, illo voluptate, ea laudantium, ipsam dolore quas fuga quaerat saepe ex deleniti. Natus, illo magni! Quam omnis cumque laboriosam ipsum id voluptates, repellat saepe natus, placeat sed molestiae, fugit nemo ea perspiciatis dolores quidem voluptatum obcaecati iste quis alias possimus voluptatem voluptatibus sit. Architecto, nemo natus id quam illo tenetur, rem officiis, ex nostrum minus mollitia! Dignissimos, exercitationem. Illum iste enim omnis quibusdam odio autem harum vitae accusantium ad vero.
+                    </div>
+                    <div class="group-message__time">
+                      12:54
+                    </div>
+                  </div>
+                  <!-- /.group-message -->
+  
+                  <div class="group-message">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path fill="#ffffff" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="#ffffff" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span>
+                    <div class="group-message__head">
+                      <a href="#" class="group-message__head-tel">+7 967 327-09-84</a>
+                      <div class="group-message__whatsapp">WhatsApp</div>
+                    </div>
+                    <div class="group-message__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ut neque explicabo, voluptatum deleniti porro nulla rerum minus quibusdam provident mollitia hic ipsum laboriosam. Tenetur debitis similique iste eveniet excepturi, illo voluptate, ea laudantium, ipsam dolore quas fuga quaerat saepe ex deleniti. Natus, illo magni! Quam omnis cumque laboriosam ipsum id voluptates, repellat saepe natus, placeat sed molestiae, fugit nemo ea perspiciatis dolores quidem voluptatum obcaecati iste quis alias possimus voluptatem voluptatibus sit. Architecto, nemo natus id quam illo tenetur, rem officiis, ex nostrum minus mollitia! Dignissimos, exercitationem. Illum iste enim omnis quibusdam odio autem harum vitae accusantium ad vero.
+                    </div>
+                    <div class="group-message__time">
+                      12:54
+                    </div>
+                  </div>
+                  <!-- /.group-message -->
+    
+                  <div class="group-message">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path fill="#ffffff" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="#ffffff" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span>
+                    <div class="group-message__head">
+                      <a href="#" class="group-message__head-tel">+7 967 327-09-84</a>
+                      <div class="group-message__whatsapp">WhatsApp</div>
+                    </div>
+                    <div class="group-message__text">
+                      Lorem, ipsum dolor.
+                    </div>
+                    <div class="group-message__time">
+                      12:54
+                    </div>
+                  </div>
+                  <!-- /.group-message -->
+
+                </div>
+                <!-- /.wrapper -->
+  
               </div>
-              <div class="group-content__search">
-                <input class="group-content__input" type="text" name="search" placeholder="Поиск...">
+              <!-- /.group-content__main -->
+
+            </div>
+            <!-- /.group-content__wrapper -->
+
+            <div class="search-block">
+              <div class="search-block__head">
+                <div class="search-block__head-btn">
+                  <svg class="group-content__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.1 17.2l-5.3-5.3 5.3-5.3-1.8-1.8-5.3 5.4-5.3-5.3-1.8 1.7 5.3 5.3-5.3 5.3L6.7 19l5.3-5.3 5.3 5.3 1.8-1.8z"></path></svg>
+                </div>
+                <div class="search-block__head-text">Поиск сообщений</div>
+              </div>
+              <!-- /.search-block__head -->
+
+              <div class="search-block__search">
                 <span>
-                  <svg class="group-content__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-                    <path d="M508.874,478.708L360.142,329.976c28.21-34.827,45.191-79.103,45.191-127.309c0-111.75-90.917-202.667-202.667-202.667
-                      S0,90.917,0,202.667s90.917,202.667,202.667,202.667c48.206,0,92.482-16.982,127.309-45.191l148.732,148.732
-                      c4.167,4.165,10.919,4.165,15.086,0l15.081-15.082C513.04,489.627,513.04,482.873,508.874,478.708z M202.667,362.667
-                      c-88.229,0-160-71.771-160-160s71.771-160,160-160s160,71.771,160,160S290.896,362.667,202.667,362.667z"/>
-                  </svg>
+                  <svg class="search-block__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.9 14.3H15l-.3-.3c1-1.1 1.6-2.7 1.6-4.3 0-3.7-3-6.7-6.7-6.7S3 6 3 9.7s3 6.7 6.7 6.7c1.6 0 3.2-.6 4.3-1.6l.3.3v.8l5.1 5.1 1.5-1.5-5-5.2zm-6.2 0c-2.6 0-4.6-2.1-4.6-4.6s2.1-4.6 4.6-4.6 4.6 2.1 4.6 4.6-2 4.6-4.6 4.6z"></path></svg>
                 </span>
+                <input class="search-block__input" type="text" name="search-block" placeholder="Поиск...">
               </div>
+              <!-- /.search-block__search -->
+
+              <div class="search-block__content">
+                Поиск сообщений в <span>Студии для отдыха</span>
+              </div>
+              <!-- /.search-block__content -->
             </div>
-            <!-- /.group-content__head -->
-
-            <div class="group-content__main">
-
-              <div class="group-message-load">
-                <a class="group-message-load__link" href="#">Ранее</a>
-              </div>
-              <!-- /.group-message-load -->
-
-              <div class="group-message-date">
-                <div class="group-message-date__text">14.08.2020</div>
-              </div>
-              <!-- /.group-message-date -->
-
-              <div class="group-message">
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path fill="#ffffff" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="#ffffff" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span>
-                <div class="group-message__head">
-                  <a href="#" class="group-message__head-tel">+7 967 327-09-84</a>
-                  <div class="group-message__whatsapp">WhatsApp</div>
-                </div>
-                <div class="group-message__text">
-                  Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-                </div>
-                <div class="group-message__time">
-                  12:54
-                </div>
-              </div>
-              <!-- /.group-message -->
-
-              <div class="group-message">
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path fill="#ffffff" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="#ffffff" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span>
-                <div class="group-message__head">
-                  <a href="#" class="group-message__head-tel">+7 967 327-09-84</a>
-                  <div class="group-message__whatsapp">WhatsApp</div>
-                </div>
-                <div class="group-message__text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quisquam eaque quidem culpa officiis omnis pariatur consequatur vitae alias nesciunt ex, voluptate voluptatum obcaecati modi repudiandae corrupti provident? Voluptate porro illo, explicabo accusamus quos, architecto animi quam numquam error cupiditate id nam, blanditiis tenetur mollitia sed nemo magni eligendi ex?
-                </div>
-                <div class="group-message__time">
-                  12:54
-                </div>
-              </div>
-              <!-- /.group-message -->
-
-              <div class="group-message">
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path fill="#ffffff" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="#ffffff" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span>
-                <div class="group-message__head">
-                  <a href="#" class="group-message__head-tel">+7 967 327-09-84</a>
-                  <div class="group-message__whatsapp">WhatsApp</div>
-                </div>
-                <div class="group-message__text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </div>
-                <div class="group-message__time">
-                  12:54
-                </div>
-              </div>
-              <!-- /.group-message -->
-
-              <div class="group-message">
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path fill="#ffffff" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="#ffffff" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span>
-                <div class="group-message__head">
-                  <a href="#" class="group-message__head-tel">+7 967 327-09-84</a>
-                  <div class="group-message__whatsapp">WhatsApp</div>
-                </div>
-                <div class="group-message__text">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo magnam cupiditate officia accusamus commodi fuga quos tenetur pariatur, quis iusto deleniti iure non odio eum et maxime earum aperiam alias placeat culpa repellendus doloremque ea? Veniam quia vero doloribus molestiae odio? Aspernatur, officiis laboriosam, laborum odit optio repudiandae veritatis ratione perspiciatis fugit inventore iusto beatae nostrum aperiam sint culpa, ea temporibus error doloribus assumenda nihil? Quaerat rerum est fugiat fugit minus esse ad temporibus error aut laboriosam, consequuntur dignissimos impedit.
-                </div>
-                <div class="group-message__time">
-                  12:54
-                </div>
-              </div>
-              <!-- /.group-message -->
-
-              <div class="group-message">
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path fill="#ffffff" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="#ffffff" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span>
-                <div class="group-message__head">
-                  <a href="#" class="group-message__head-tel">+7 967 327-09-84</a>
-                  <div class="group-message__whatsapp">WhatsApp</div>
-                </div>
-                <div class="group-message__text">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo magnam cupiditate officia accusamus commodi fuga quos tenetur pariatur, quis iusto deleniti iure non odio eum et maxime earum aperiam alias placeat culpa repellendus doloremque ea? Veniam quia vero doloribus molestiae odio? Aspernatur, officiis laboriosam, laborum odit optio repudiandae veritatis ratione perspiciatis fugit inventore iusto beatae nostrum aperiam sint culpa, ea temporibus error doloribus assumenda nihil? Quaerat rerum est fugiat fugit minus esse ad temporibus error aut laboriosam, consequuntur dignissimos impedit.
-                </div>
-                <div class="group-message__time">
-                  12:54
-                </div>
-              </div>
-              <!-- /.group-message -->
-
-              <div class="group-message">
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path fill="#ffffff" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="#ffffff" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span>
-                <div class="group-message__head">
-                  <a href="#" class="group-message__head-tel">+7 967 327-09-84</a>
-                  <div class="group-message__whatsapp">WhatsApp</div>
-                </div>
-                <div class="group-message__text">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo magnam cupiditate officia accusamus commodi fuga quos tenetur pariatur, quis iusto deleniti iure non odio eum et maxime earum aperiam alias placeat culpa repellendus doloremque ea? Veniam quia vero doloribus molestiae odio? Aspernatur, officiis laboriosam, laborum odit optio repudiandae veritatis ratione perspiciatis fugit inventore iusto beatae nostrum aperiam sint culpa, ea temporibus error doloribus assumenda nihil? Quaerat rerum est fugiat fugit minus esse ad temporibus error aut laboriosam, consequuntur dignissimos impedit.
-                </div>
-                <div class="group-message__time">
-                  12:54
-                </div>
-              </div>
-              <!-- /.group-message -->
-
-              <div class="group-message">
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13"><path fill="#ffffff" d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path><path fill="#ffffff" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path></svg></span>
-                <div class="group-message__head">
-                  <a href="#" class="group-message__head-tel">+7 967 327-09-84</a>
-                  <div class="group-message__whatsapp">WhatsApp</div>
-                </div>
-                <div class="group-message__text">
-                  Lorem, ipsum dolor.
-                </div>
-                <div class="group-message__time">
-                  12:54
-                </div>
-              </div>
-              <!-- /.group-message -->
-
-            </div>
-            <!-- /.group-content__main -->
+            <!-- /.search-block -->
 
           </div>
           <!-- /.group-content -->
@@ -541,6 +548,8 @@
     <!-- /.page -->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/app.js"></script>
 

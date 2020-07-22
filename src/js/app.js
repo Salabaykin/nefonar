@@ -39,8 +39,43 @@ var accordion = (function (element) {
   }
 })();
 
-var accordion1 = accordion();
-accordion1.init('#accordion');
+var group = accordion();
+group.init('#accordion');
 
-var groupContent = document.getElementById("group-content");
+var groupContent = document.getElementById('group-content');
 groupContent.scrollTop = groupContent.scrollHeight;
+
+var searchBlock = $('.search-block');
+$(document).on('click', '.group-content__search', function () {
+  searchBlock.slideToggle();
+  return false;
+});
+
+var btnSearch = document.querySelector('.group-content__search');
+var btnClose = document.querySelector('.search-block__head-btn');
+var searchBlock = document.querySelector('.search-block');
+
+btnSearch.addEventListener('click', function() {
+  searchBlock.classList.toggle('open');
+}, false);
+
+btnClose.addEventListener('click', function() {
+  searchBlock.classList.remove('open');
+}, false);
+
+$('.group-content__main').mCustomScrollbar({
+  axis: 'y',              
+  theme: 'dark',  // тема 
+  scrollInertia: '330',   // продолжительность прокрутки, значение в миллисекундах 
+  mouseWheel: {
+      deltaFactor: 80    // кол-во пикселей на одну прокрутку колёсика мыши 
+  }
+});
+$('.group').mCustomScrollbar({
+  axis: 'y',              
+  theme: 'dark',  // тема 
+  scrollInertia: '330',   // продолжительность прокрутки, значение в миллисекундах 
+  mouseWheel: {
+      deltaFactor: 80    // кол-во пикселей на одну прокрутку колёсика мыши 
+  }
+});
