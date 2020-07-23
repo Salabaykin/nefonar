@@ -66,16 +66,17 @@ btnClose.addEventListener('click', function() {
 $('.group-content__main').mCustomScrollbar({
   axis: 'y',              
   theme: 'dark',  // тема 
-  scrollInertia: '330',   // продолжительность прокрутки, значение в миллисекундах 
+  scrollInertia: '250',   // продолжительность прокрутки, значение в миллисекундах 
   mouseWheel: {
-      deltaFactor: 80    // кол-во пикселей на одну прокрутку колёсика мыши 
+      deltaFactor: 90    // кол-во пикселей на одну прокрутку колёсика мыши 
   }
 });
+
 $('.group').mCustomScrollbar({
   axis: 'y',              
   theme: 'dark',  // тема 
-  scrollInertia: '330',   // продолжительность прокрутки, значение в миллисекундах 
+  scrollInertia: '250',   // продолжительность прокрутки, значение в миллисекундах 
   mouseWheel: {
-      deltaFactor: 80    // кол-во пикселей на одну прокрутку колёсика мыши 
+      deltaFactor: 90    // кол-во пикселей на одну прокрутку колёсика мыши 
   }
 });
