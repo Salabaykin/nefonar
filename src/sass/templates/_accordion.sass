@@ -5,12 +5,15 @@
             margin-bottom: 0
         &__header 
             position: relative
-            padding: 15px 25px 15px 15px
+            padding: 15px 35px 15px 15px
             color: #000000
             text-transform: uppercase
             cursor: pointer
             background-color: transparent
             border-radius: 5px
+            @media ( max-width: 1230px )
+                font-size: 0.9rem
+                padding: 12px 35px 12px 12px
             &::after
                 content: ''
                 position: absolute
@@ -66,6 +69,8 @@
                 padding-right: 73px
                 font-size: 1.0625rem
                 color: #000000
+                @media ( max-width: 1230px )
+                    font-size: 0.9rem
             &-date
                 position: absolute
                 top: 4px
@@ -76,6 +81,8 @@
             font-size: 0.88rem
             line-height: 1.3125rem
             color: rgba(0,0,0,0.6)
+            @media ( max-width: 1230px )
+                font-size: 0.8rem
 
 .accordion-item.show .accordion-item__content 
     visibility: visible

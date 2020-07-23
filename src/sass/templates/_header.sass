@@ -27,6 +27,8 @@
             background-color: $main
             border-radius: 3px
             color: #ffffff
+    @media ( max-width: 800px )
+        display: none
 
 .plus, .info
     position: absolute
@@ -46,9 +48,13 @@
 .logo
     display: flex
     align-items: center
-    width: 230px
+    max-width: 230px
     img 
         width: 100%
+    @media ( max-width: 1400px )
+        margin-left: 10px
+    @media ( max-width: 1230px )
+        max-width: 160px
     
 .sign-in
     &__link
@@ -61,3 +67,5 @@
         transition: background-color 0.2s
         &:hover
             background-color: lighten($main, 8%)
+    @media ( max-width: 1400px )
+        margin-right: 10px

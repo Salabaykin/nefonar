@@ -4,6 +4,8 @@
     overflow-y: hidden
     display: flex
     flex: 1
+    @media ( max-width: 1100px )
+        position: relative
     &__head 
         z-index: 2
         padding: 10px 16px
@@ -37,11 +39,15 @@
             font-size: 0.95rem
             font-weight: bold
             line-height: 1.25
+            @media ( max-width: 1100px )
+                font-size: 0.85rem
         &-num
             line-height: 1.25
             font-weight: bold
             font-size: 0.95rem
             color: #A7A7A7
+            @media ( max-width: 1100px )
+                font-size: 0.85rem
     &__main
         overflow-x: hidden
         position: relative
@@ -56,6 +62,8 @@
         width: 40px
         height: 40px
         cursor: pointer
+        @media ( max-width: 800px )
+            display: none
     &__icon
         width: 24px
         height: 24px
@@ -64,12 +72,16 @@
         flex: 1px
 
 .search-block
-    transition: 0.15s 
+    transition: transform 0.15s ease
     transform: translate(200%, 0)
     width: 0
     height: 100%
     background-color: #ffffff
     text-align: center
+    @media ( max-width: 1100px )
+        transform: translate(100%, 0)
+    @media ( max-width: 800px )
+        display: none
     &__head
         display: flex
         min-height: 61px
@@ -122,7 +134,18 @@
 
 .search-block.open
     width: 340px
-    transform: translate(0, 0)
+    transform: translate(0%, 0)
+    @media ( max-width: 1150px )
+        width: 290px
+    @media ( max-width: 1100px )
+        width: 100%
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 100
+        transform: translate(0%, 0)
 
 input.search-block__input
     transition: all 0.2s

@@ -42,15 +42,6 @@ var accordion = (function (element) {
 var group = accordion();
 group.init('#accordion');
 
-var groupContent = document.getElementById('group-content');
-groupContent.scrollTop = groupContent.scrollHeight;
-
-var searchBlock = $('.search-block');
-$(document).on('click', '.group-content__search', function () {
-  searchBlock.slideToggle();
-  return false;
-});
-
 var btnSearch = document.querySelector('.group-content__search');
 var btnClose = document.querySelector('.search-block__head-btn');
 var searchBlock = document.querySelector('.search-block');

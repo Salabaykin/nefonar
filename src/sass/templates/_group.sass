@@ -1,7 +1,12 @@
 .group
     width: 420px
     height: calc(100vh - 115px)
-    // overflow-y: scroll
+    @media ( max-width: 1400px )
+        padding-left: 10px
+    @media ( max-width: 1230px )
+        width: 340px
+    @media ( max-width: 800px )
+        width: 100%
     &-search
         padding-right: 10px
         position: relative
@@ -17,6 +22,8 @@
             color: #000000
             font-family: 'Segoe UI', sans-serif
             font-size: 1rem 
+            @media ( max-width: 1230px )
+                font-size: 0.9rem
         &__icon
             position: absolute
             top: 50%
@@ -40,6 +47,10 @@
             font-weight: bold
             background-color: #EDEDED
             transition: all 0.2s
+            @media ( max-width: 1230px )
+                font-size: 0.9rem
+            @media ( max-width: 800px )
+                text-align: center
             span
                 position: relative
                 margin-right: 35px
@@ -62,3 +73,6 @@ input.group-search__input
     &:focus
         transition: all 0.2s
         box-shadow: 0 1px .5px rgba(0,0,0,.13)
+
+.hide
+    display: none
