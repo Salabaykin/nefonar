@@ -45,6 +45,11 @@ group.init('#accordion');
 var btnSearch = document.querySelector('.group-content__search');
 var btnClose = document.querySelector('.search-block__head-btn');
 var searchBlock = document.querySelector('.search-block');
+var btnMenu = document.querySelector('.nav-mobile');
+var navBlock = document.querySelector('.nav-wrapper');
+var groupAdd = document.querySelector('.group-add__button');
+var modal = document.querySelector('.modal');
+var modalClose = document.querySelector('.modal__close');
 
 btnSearch.addEventListener('click', function() {
   searchBlock.classList.toggle('open');
@@ -52,6 +57,18 @@ btnSearch.addEventListener('click', function() {
 
 btnClose.addEventListener('click', function() {
   searchBlock.classList.remove('open');
+}, false);
+
+btnMenu.addEventListener('click', function() {
+  navBlock.classList.toggle('open');
+}, false);
+
+modalClose.addEventListener('click', function() {
+  modal.classList.toggle('open');
+}, false);
+
+groupAdd.addEventListener('click', function() {
+  modal.classList.toggle('open');
 }, false);
 
 $('.group-content__main').mCustomScrollbar({

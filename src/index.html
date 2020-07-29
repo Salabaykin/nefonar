@@ -21,23 +21,31 @@
                   </div>
                   <!-- /.logo -->
           
-                  <nav class="nav">
+                  <div class="nav-wrapper">
+
+                    <nav class="nav">
                       <ul class="nav__list">
                           <li><a class="nav__link" href="#"><span class="info"></span> О сервисе Nefonar</a></li>
                           <li><a class="nav__link" href="#"><span class="plus"></span> Как добавить объявление?</a></li>
                       </ul>
-                  </nav>
-                  <!-- /nav -->
+                    </nav>
+                    <!-- /nav -->
+          
+                    <div class="sign-in">
+                        <a class="sign-in__link" href="#">Войти</a>
+                        <a class="sign-in__link reg" href="#">Регистрация</a>
+                    </div>
+                    <!-- /.sign-in -->
+
+                  </div>
+                  <!-- /.nav-wrapper -->
 
                   <div class="nav-mobile">
-                    <span></span>
+                    <svg class="nav-mobile__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 459 459">
+                      <path d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z"/>
+                    </svg>
                   </div>
                   <!-- /.nav-mobile -->
-          
-                  <div class="sign-in">
-                      <a class="sign-in__link" href="#">Войти</a>
-                  </div>
-                  <!-- /.sign-in -->
   
               </div>
               <!-- /.header__wrapper -->
@@ -406,8 +414,11 @@
                       <a href="#" class="group-message__head-tel">+7 967 327-09-84</a>
                       <div class="group-message__whatsapp">WhatsApp</div>
                     </div>
+                    <div class="group-message__img">
+                      <img src="images/message-img.jpg" alt="Photo">
+                    </div>
                     <div class="group-message__text">
-                      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. At maiores, voluptates alias laboriosam velit facere repellendus consequuntur ipsum quidem officiis.
                     </div>
                     <div class="group-message__time">
                       12:54
@@ -550,6 +561,26 @@
 
     </div>
     <!-- /.page -->
+
+    <div class="modal">
+      <div class="modal__wrapper">
+        <div class="modal__content">
+          <div class="modal__head">
+            <div class="modal__close">
+              <svg class="modal__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M19.1 17.2l-5.3-5.3 5.3-5.3-1.8-1.8-5.3 5.4-5.3-5.3-1.8 1.7 5.3 5.3-5.3 5.3L6.7 19l5.3-5.3 5.3 5.3 1.8-1.8z"></path></svg>
+            </div>
+            <div class="modal__title">Добавить новую группу</div>
+          </div>
+          <!-- /.modal__head -->
+          <div class="modal__body">
+            Содержимое
+          </div>
+        </div>
+        <!-- /.modal__content -->
+      </div>
+      <!-- /.modal__wrapper -->
+    </div>
+    <!-- /.modal -->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
