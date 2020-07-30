@@ -31,7 +31,7 @@
             background: #fff
             transition: opacity .4s ease
             visibility: hidden
-            height: 0
+            max-height: 0
             opacity: 0
     &-group
         border-bottom: 1px solid #f2f2f2
@@ -86,9 +86,14 @@
 
 .accordion-item.show .accordion-item__content 
     visibility: visible
-    height: auto
+    max-height: 285px
+    overflow: auto !important
     opacity: 1
     border-radius: 0 0 5px 5px
+
+.accordion-item.show .accordion-item__wrapper
+    max-height: 285px
+    overflow: auto !important
 
 .accordion-item.show .accordion-item__header 
     background-color: #EDEDED

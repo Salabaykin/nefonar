@@ -6,7 +6,7 @@
     position: relative
     width: fit-content
     max-width: 550px
-    padding: 6px 7px 15px 9px
+    padding: 6px 7px 25px 9px
     background-color: #ffffff
     border-radius: 0 7px 7px 7px
     box-shadow: 0 1px .5px rgba(0,0,0,.13)
@@ -56,7 +56,6 @@
         right: 8px
         font-size: 11px
         color: #A7A7A7
-        background-color: #ffffff
     &__whatsapp
         font-size: 12px
         color: #A7A7A7
@@ -92,3 +91,39 @@
             text-shadow: 0 1px 0 rgba(255,255,255,.4) 
     &-load
         margin-top: 20px
+    &__doc 
+        margin-bottom: 10px
+        width: fit-content
+        background-color: rgba(0,0,0,0.05)
+        cursor: pointer
+        padding: 13px 19px
+        align-items: center
+        display: flex
+        flex: 0 0 auto
+        text-decoration: none
+        border-radius: 7px
+        overflow: hidden
+        position: relative
+        text-overflow: ellipsis
+        white-space: nowrap
+    &__doc-img
+        background-repeat: no-repeat
+        background-size: contain
+        background-image: url('../images/icons/doc.png')
+        height: 30px
+        width: 26px
+    &__doc-text
+        max-width: 200px
+        margin: 0 10px
+        overflow: hidden
+        position: relative
+        text-overflow: ellipsis
+        white-space: nowrap
+    &__format 
+        position: absolute
+        bottom: 5px
+        left: 8px
+        font-size: 11px
+        color: rgba(0,0,0,0.45)
+    &__doc-icon 
+        fill: rgba(51,51,51,0.5)

@@ -88,3 +88,12 @@ $('.group').mCustomScrollbar({
       deltaFactor: 90    // кол-во пикселей на одну прокрутку колёсика мыши 
   }
 });
+
+$('.accordion-item__wrapper').mCustomScrollbar({
+  axis: 'y',              
+  theme: 'dark',  // тема 
+  scrollInertia: '250',   // продолжительность прокрутки, значение в миллисекундах 
+  mouseWheel: {
+      deltaFactor: 90    // кол-во пикселей на одну прокрутку колёсика мыши 
+  }
+});
