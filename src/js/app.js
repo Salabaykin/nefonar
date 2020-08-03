@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() {
+
 // Accordion 
 
 var accordion = (function (element) {
@@ -42,7 +44,7 @@ var accordion = (function (element) {
 var group = accordion();
 group.init('#accordion');
 
-var btnSearch = document.querySelector('.group-content__search');
+var btnSearch = document.querySelector('.group-content__news');
 var btnClose = document.querySelector('.search-block__head-btn');
 var searchBlock = document.querySelector('.search-block');
 var btnMenu = document.querySelector('.nav-mobile');
@@ -71,29 +73,16 @@ groupAdd.addEventListener('click', function() {
   modal.classList.toggle('open');
 }, false);
 
-$('.group-content__main').mCustomScrollbar({
-  axis: 'y',              
-  theme: 'dark',  // тема 
-  scrollInertia: '250',   // продолжительность прокрутки, значение в миллисекундах 
-  mouseWheel: {
-      deltaFactor: 90    // кол-во пикселей на одну прокрутку колёсика мыши 
-  }
+OverlayScrollbars(document.querySelectorAll(".group-content__main"), { 
+  className: 'os-theme-dark'
 });
 
-$('.group').mCustomScrollbar({
-  axis: 'y',              
-  theme: 'dark',  // тема 
-  scrollInertia: '250',   // продолжительность прокрутки, значение в миллисекундах 
-  mouseWheel: {
-      deltaFactor: 90    // кол-во пикселей на одну прокрутку колёсика мыши 
-  }
+OverlayScrollbars(document.querySelectorAll(".group"), { 
+  className: 'os-theme-dark'
 });
 
-$('.accordion-item__wrapper').mCustomScrollbar({
-  axis: 'y',              
-  theme: 'dark',  // тема 
-  scrollInertia: '250',   // продолжительность прокрутки, значение в миллисекундах 
-  mouseWheel: {
-      deltaFactor: 90    // кол-во пикселей на одну прокрутку колёсика мыши 
-  }
+OverlayScrollbars(document.querySelectorAll(".accordion-item__wrapper"), { 
+  className: 'os-theme-dark'
+});
+
 });
